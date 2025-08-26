@@ -1,0 +1,10 @@
+using System;
+
+// Problem 1
+int[,] numbers = new int { 12, 7, 4, 27, 1, 13, 19, 6, 30, 9, 8};
+foreach (int i in numbers) {
+    Console.WriteLine(i);
+}
+
+// Problem 2
+int[,] numbers2 = new int[7,10] {}
