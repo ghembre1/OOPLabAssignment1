@@ -9,13 +9,20 @@ for (int i = 0; i < numbers.Length; i++)
     {
         if (numbers[i} > numbers[j])
         {
-            
+            int temp = numbers[i];
+            numbers[i] = numbers[j];
+            numbers[j] = temp;
+        }
+    }
+}
 
-foreach (int i in numbers) {
+foreach (int i in numbers) 
+{
     Console.WriteLine(i);
 }
 
 // Problem 2
 
 int[,] numbers2 = new int[7,10] {}
+
 
