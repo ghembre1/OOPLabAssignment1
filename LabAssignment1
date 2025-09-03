@@ -16,13 +16,12 @@ for (int i = 0; i < numbers.Length; i++)
     }
 }
 
-foreach (int i in numbers) 
+foreach (int n in numbers) 
 {
     Console.WriteLine(i);
 }
 
 // Problem 2
-
 int[,] numbers2 = { 
     {54, 3, 21, 50, 57, 7, 73, 24, 85, 79},
     {33, 11, 19, 33, 51, 72, 80, 6, 78, 25},
@@ -32,6 +31,32 @@ int[,] numbers2 = {
     {87, 88, 8, 61, 74, 14, 66, 20, 59, 81},
     {18, 76, 2, 5, 26, 84, 15, 82, 9, 60}
 };
+int rows = numbers.GetLength(0);
+int cols = numbers.GetLength(1);
 
-
-
+for (int r1 = 0; r1 < rows; r1++)
+    {
+        for (int c1 = 0; c1 < cols; c1++)
+        {
+            for (int r2 = 0; r2 < rows; r2++)
+            {
+                for (int c2 = 0; c2 < cols; c2++)
+                {
+                    if(numbers[r1, c1] < numbers[r2, c2])
+                    {
+                        int temp = numbers[r1, c1];
+                        numbers[r1, c1] = numbers[r2, c2];
+                        numbers[r2, c2] = temp;
+                    }
+                }
+            }
+        }
+    }
+for (int r = 0; r < rows; r++)
+    {
+        for (int c = 0; c < cols; c++)
+            {
+                Console.Write(numbers[r, c].ToString().PadLeft(3));
+            }
+                Console.WriteLine();
+            }
